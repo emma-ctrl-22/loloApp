@@ -57,6 +57,7 @@ function SignUp() {
                       <input type="text" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
                       <button type="submit"> Sign Up</button>
                   </form>
+                  <div><Link to="/login">Already have an account</Link></div>
               </div>
           </div>
     </div>
