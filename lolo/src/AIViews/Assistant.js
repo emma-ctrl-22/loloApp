@@ -1,13 +1,27 @@
 import '../App.css'
-import {Link } from 'react-router-dom'
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useState, useEffect,useMemo } from 'react'
 function Assistant() {
     const [prompt, setPrompt] = useState("")
-    const [answer, setAnswer] = useState("")
+    const [messages, setMessages] = useState("")
 
-    const getMessages = () => {
+    const getMessages = async () => {
+        console.log("posted")
+        try {
+            const response = await fetch('http://localhost:5000/codebuddy', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ prompt }),
+            });
+            const data = await response.json();
+            setMessages(data);
+        } catch (error) {
+            console.error('Error fetching response:', error);
+        }
+    };
 
-    }
 
     return (
         <div className="ai-container">
@@ -23,12 +37,12 @@ function Assistant() {
             </div>
 
             <div className="right-end">
-                <div className="answers">
-
-                </div>
+                <ul className="answers">
+                   
+                </ul>
 
                 <div className="prompt-container">
-                    <input className="prompt-input" type="text" />
+                    <input className="prompt-input" value={prompt} type="text" onChange={(e) => setPrompt(e.target.value)} />
                     <button className="upload-prompt" onClick={getMessages}>
                         <p>&uarr;</p>
                     </button>

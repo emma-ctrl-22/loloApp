@@ -30,7 +30,7 @@ mongoose
     console.error("Error connecting to MongoDB:", err);
   });
 
-app.use('/ai', codeBuddy);
+app.use('/', codeBuddy);
 
 const verifyUser = (req, res, next) => {
   const token = req.cookie.token;

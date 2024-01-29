@@ -8,7 +8,7 @@ const openai = new OpenAI({
 
 router.post('/codebuddy', async (req, res) => {
     const { prompt } = req.body;
-
+    consolo.log("posted")
     try {
         const response = await openai.createChatCompletion({
             messages: [{ role: "assistant", content: prompt }],
