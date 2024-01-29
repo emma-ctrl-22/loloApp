@@ -18,7 +18,7 @@ root.render(
                 <Route path="/login" element={<Login />} />
                 <Route path="/" element={<SignUp />} />
                 <Route path="/AI_Assistant" element={<Assistant />} />
-                <Route path="/editor" element={<Editor />} />
+                <Route path="/editor/:roomId" element={<Editor />} />
             </Routes>
         </BrowserRouter>
   </React.StrictMode>
