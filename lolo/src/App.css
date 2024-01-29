@@ -1,0 +1,246 @@
+.App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: #1C1D22;
+}
+body{
+    height:100vh;
+margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+.left-side {
+    background:#1F5281;
+    height:100%;
+    width:25%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:22px;
+}
+.left-side h1{
+    color:white;
+    font-size:1.5rem;
+    margin-top:28%
+}
+.feature-div{
+    height:40%;
+    width:80%;
+    margin-top:20%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.bottom-links {
+    font-size:1rem;
+    text-decoration:none;
+    width: 80%;
+    height: 5%;
+    margin-top: 57%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color:#39CD6C;
+}
+.bottom-links login-links {
+    text-decoration: none;
+    color: #39CD6C;
+}
+.feature{
+    width:95%;
+    height:18%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+.check{
+    height:75%;
+    width:15%;
+    background:yellow;
+}
+.feature-txt{
+    color:white;
+    font-size:0.8rem;
+    font-family:sans-serif;
+    text-align:left;
+}
+.right-side{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    width:75%;
+    margin-top: 22px;
+}
+.container{
+    width:60%;
+    height:70%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.heading{
+    width:100%;
+    height:10%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+}
+.heading h3 {
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 1.2rem;
+        color:#071437;
+}
+.the-form{
+    width:100%;
+    height:40%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+}
+.the-form input{
+    width:60%;
+    height:13%;
+    font-family:'Inter';
+    font-weight:400;
+    font-size:0.7rem;
+    padding:0.2rem;
+    border-radius:0.3rem;
+    border: solid 1px gray;
+}
+.the-form button {
+        width: 62%;
+        height: 16%;
+        color: white;
+        background: #1B84FF;
+        font-family:'Inter';
+        font-size:0.8rem;
+        font-weight:600;
+        border:none;
+        border-radius:0.2rem;
+}
+.tools {
+    width: 50%;
+    height: 70%;
+    background: dodgerblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: auto;
+}
+.home-container {
+    width: 100vw;
+    height: 103.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1C1D22;
+}
+.ai-container {
+    width: 99.9vw;
+    height: 103vh;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    background: #343541;
+    display:flex;
+}
+.left-end{
+    width:18%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    background:black;
+}
+.right-end {
+    width: 82%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.ai_heading{
+    width:100%;
+    height:10%;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+}
+.new-chat{
+    width:70%;
+    height:5%;
+    border:1px solid white;
+    border-radius:0.2rem;
+    background:black;
+    color:white;
+    margin-top:2rem;
+}
+.ai_heading h4{
+    font-size:1rem;
+    color:white;
+    margin-left:2rem;
+    margin-top:2rem;
+}
+.answers{
+    width:60%;
+    height:70%;
+    overflow:scroll;
+    margin-top:6rem;
+}
+.prompt-container{
+    border:1px solid white;
+    width:65%;
+    border-radius:0.5rem;
+    height:7%;
+    margin-bottom:1.5rem;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.prompt-input{
+    background-color:transparent;
+    border:none;
+    width:90%;
+    height:85%;
+    margin-left:0.5rem;
+    color:white;
+    font-family:'Inter';
+}
+.prompt-input:focus {
+    border-color: transparent;
+    outline: none;
+}
+.prompt-input:valid {
+    border-color: transparent;
+}
+.upload-prompt{
+    width:4.6%;
+    height:60%;
+    border-radius:0.2rem;
+    border:none;
+    margin-left:1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.5rem;
+    font-weight:bold;
+    padding-bottom:2rem;
+    cursor:pointer;
+    background:white;
+}
+.upload-prompt p {
+    font-weight:bolder;
+    margin-top:3rem;
+}

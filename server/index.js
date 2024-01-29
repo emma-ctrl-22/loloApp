@@ -5,7 +5,8 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const UserModel = require("./models/UserModel");
-
+const bodyParser = require("body-parser");
+const codeBuddy = require("./routes/CodeBuddy");
 const app = express();
 
 app.use(express.json());
@@ -28,6 +29,8 @@ mongoose
   .catch((err) => {
     console.error("Error connecting to MongoDB:", err);
   });
+
+app.use('/ai', codeBuddy);
 
 const verifyUser = (req, res, next) => {
   const token = req.cookie.token;
@@ -63,13 +66,13 @@ app.post("/register", (req, res) => {
 
 
 app.post("/login", (req, res) => {
-  const { email, password } = req.body;
+  const { email, password,name } = req.body;
   UserModel.findOne({ email: email }).then((user) => {
     if (user) {
       bcrypt.compare(password, user.password, (err, response) => {
         if (response) {
           const token = jwt.sign(
-            { email: user.email, role: user.role },
+            { email: user.email, name: user.name },
             "thespecialsecretkey",
             { expiresIn: "1d" }
           );
